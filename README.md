@@ -1,2 +1,2 @@
 # Projektbericht
-................
+vertraue auf jesus

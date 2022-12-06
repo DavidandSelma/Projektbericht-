@@ -21,4 +21,79 @@ Hat man 10 Wale in der „SpaceWorld“ und 15 in der „BlackHoleworld“ einge
 
 ## Code
 ### SpaceWorld 
+
+Die „SpaceWorld“ ist eine Subklasse der „World-Klasse“. Der sichtbare Bereich ist 800 mal 400 Pixel groß. Die Welt ist jedoch unendlich groß, weil der Parameter „bounded“ auf „false“ gesetzt wurde.
+
+Die Klasse „SpaceWorld“ hat zwei Variablen, einen „Counter“ und einen „Score“.
+
+Anfänglich steht der Counter auf 0, jedes Mal, wenn die „act“-Methode aufgerufen wird, dann wird der Counter um 1 erhöht. 
+Erreicht der Counter ein Vielfaches von 50, dann wird ein neuer Asteroid produziert, der sich auf einer Position links außerhalb des sichtbaren Bereiches und auf einer zufällig generierten Höhe befindet. Es wird sichergestellt, dass der Asteroid sich nicht oberhalb der Welt befindet, indem man als maximalen Wert für die Zufallsgenerierung die Höhe der Welt 
+-1 nimmt. 
+ 
+Ähnlich ist das Prinzip bei den Walen, die in der Welt erscheinen, wenn der Counter ein Vielfaches von 60 erreicht. Die Position der Wale wird zufällig generiert, wobei man die Höhe und die Breite der Welt -1 nimmt, um sicherzustellen, dass der Wal sich innerhalb des sichtbaren Bereichs befindet und nicht außerhalb der Welt.
+
+Der „Score“ wird in der Welt angezeigt und immer erhöht, wenn ein Wal vom „Spaceship“ eingesammelt wurde. 
+Erreicht der Score 10, dann wechselt das Spiel in das 2-Level, die „BlackHoleworld“.
+
+Mit „fillWorld“ werden die „Actors“ in die Welt positioniert, insbesondere das „Spaceship“ und ein erster „Asteroid“.
+
+Wenn das Spiel gestartet wird, dann wird eine Hintergrundmusik in einer Schleife abgespielt und wenn das Spiel pausiert wird oder endet, endet auch die Musik. 
+
+`import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
+public class SpaceWorld extends World {
+    private int counter = 0; 
+    private Counter scorecounter = new Counter(); 
+    private GreenfootSound music = new GreenfootSound("background.wav");
+
+    public SpaceWorld() {    
+        super(800, 400, 1, false);  // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        fillWorld();
+    }
+
+    public Counter getCounter() {
+        return scorecounter; 
+    }
+
+    public void act() {
+        counter = counter +1;
+        if (scorecounter.getScore() >= 10) {
+            Greenfoot.setWorld(new BlackHoleworld(scorecounter));
+        }
+        if (counter % 50 == 0) {
+            Asteroid myAsteroid = new Asteroid(); 
+            addObject(myAsteroid, -20, Greenfoot.getRandomNumber(getHeight()-1)); 
+        }
+        if (counter % 60 == 0) {
+            Wale myWale = new Wale(); 
+            addObject(myWale, Greenfoot.getRandomNumber(getWidth()-1), Greenfoot.getRandomNumber(getHeight()-1)); 
+        }
+    }
+
+    public void fillWorld() {
+        addObject (scorecounter, 730,20); 
+        Spaceship mySpaceship = new Spaceship(scorecounter);
+        addObject(mySpaceship, 600, 200);
+        Asteroid myAsteroid = new Asteroid(); 
+        addObject(myAsteroid, -20, 100); 
+    }
+
+    public void started()
+    {
+        music.playLoop();
+    }
+
+    public void stopped()
+    {
+        music.stop();
+    }
+}
+`
 ### BlackHoleworld
+### Spaceship
+### Asteroid 
+### Wale 
+### Counter 
+### Explosion
+### Game Over 
+### Victory 

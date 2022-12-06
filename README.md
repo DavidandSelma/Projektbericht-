@@ -39,7 +39,7 @@ Mit „fillWorld“ werden die „Actors“ in die Welt positioniert, insbesonde
 
 Wenn das Spiel gestartet wird, dann wird eine Hintergrundmusik in einer Schleife abgespielt und wenn das Spiel pausiert wird oder endet, endet auch die Musik. 
 
-<details>
+<Code SpaceWorld>
  
 ### BlackHoleworld
 ### Spaceship

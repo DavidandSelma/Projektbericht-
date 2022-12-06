@@ -41,6 +41,7 @@ Wenn das Spiel gestartet wird, dann wird eine Hintergrundmusik in einer Schleife
 
 <details>
 	<summary>Ausschnitt des Codes</summary>
+	
  
 ### BlackHoleworld
 ### Spaceship

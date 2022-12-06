@@ -27,3 +27,14 @@ Das Ziel ist es, Wale mit dem Raumschiff einzusammeln. Diese tauchen zufälliger
 Beim Einsammeln der Wale muss man Asteroiden, die vom linken Bildrand zum rechten ziehen, ausweichen. Denn wenn ein Asteroid und das Raumschiff aufeinander treffen, dann entsteht eine Explosion, ein Explosionsgeräusch ertönt und das Spiel ist verloren und stoppt automatisch.
 
 Hat man 10 Wale in der „SpaceWorld“ und 15 in der „BlackHoleworld“ eingesammelt, dann ist das Spiel gewonnen und ein „Victory“-Banner erscheint.
+
+ 	Zunächst einmal gibt es in der Klasse „Explosion“ den Code dafür, dass ein Explosionsgeräusch auftritt, sobald das Spaceship mit einem Asteroiden zusammentrifft. Der Sound wird hierbei durch eine eingefügte Wav-Datei erzeugt. 
+
+Des Weiteren verschwindet das Explosions-Icon, nachdem die „act“-Methode 10-mal aufgerufen wurde, wieder von selbst. 
+	
+Code - GameOver	Erklärung
+ 	In der Klasse „GameOver“, ist der Code, für die Anzeige des GameOver-Banners, der beim Verlieren des Spiels erscheint, enthalten. Wann der GameOver-Banner erscheinen soll, ist in der Klasse des „Spaceship“ definiert.
+	
+Code - Victory	Erklärung
+ 	In der Klasse „Victory“, ist der Code, für die Anzeige des Victory-Banners, der beim Gewinnen des Spiels erscheint, definiert. Wann der Victory-Banner erscheinen soll, wird von der Klasse „BlackHoleworld“ gesteuert.
+

@@ -1,24 +1,15 @@
 # Projektbericht
 
-# Einleitung
 
-# Erklärung Greenfoot (was man macht/ wie es funktioniert)
+## Erklärung Greenfoot
 
-# Spiel erklären 
-
-# Code erklären 
-
-# Quellen 
-Projektbericht 
-
-1.	Erklärung Greenfoot
 Wir haben uns im Zuge unseres Projekts mit der Umgebung Greenfoot beschäftigt. Genauer gesagt, haben wir ein Spiel mithilfe von Java in Greenfoot programmiert.
 Greenfoot ist eine interaktive Java-Entwicklungsumgebung, die besonders für Schüler, Studenten und Programmieranfänger geeignet ist. Mithilfe von vordefinierten Klassen können einfach zweidimensionale graphische Anwendungen wie Spiele oder Simulationen erstellt werden.
 Im Prinzip gibt es in Greenfoot „World“- und „Actor“-Klassen. Von beiden lassen sich Unterklassen, sogenannte „Subclasses“ erstellen, die spezifische Eigenschaften besitzen und eine bestimmte Rolle im Spiel erfüllen. 
 Eine „World“ ist zweidimensional und ein Ort, in dem die „Actors“ sich befinden und agieren. Ein „Actor“ ist ein Objekt, das in einer „World“ existiert und einen bestimmten Standort hat.
 Das Aussehen von „World“- und „Actor“-Objekten lässt sich über ein Icon bestimmen.
 
-2.	Spiel erklären
+## Spiel erklären
 
 Unser Spiel funktioniert folgendermaßen: Man steuert ein Raumschiff - das „Spaceship“- in einer Galaxy. Hier gibt es zwei Level: das erste ist die „Spaceworld“ und das zweite die „BlackHoleworld“. 
 
@@ -28,13 +19,6 @@ Beim Einsammeln der Wale muss man Asteroiden, die vom linken Bildrand zum rechte
 
 Hat man 10 Wale in der „SpaceWorld“ und 15 in der „BlackHoleworld“ eingesammelt, dann ist das Spiel gewonnen und ein „Victory“-Banner erscheint.
 
- 	Zunächst einmal gibt es in der Klasse „Explosion“ den Code dafür, dass ein Explosionsgeräusch auftritt, sobald das Spaceship mit einem Asteroiden zusammentrifft. Der Sound wird hierbei durch eine eingefügte Wav-Datei erzeugt. 
-
-Des Weiteren verschwindet das Explosions-Icon, nachdem die „act“-Methode 10-mal aufgerufen wurde, wieder von selbst. 
-	
-Code - GameOver	Erklärung
- 	In der Klasse „GameOver“, ist der Code, für die Anzeige des GameOver-Banners, der beim Verlieren des Spiels erscheint, enthalten. Wann der GameOver-Banner erscheinen soll, ist in der Klasse des „Spaceship“ definiert.
-	
-Code - Victory	Erklärung
- 	In der Klasse „Victory“, ist der Code, für die Anzeige des Victory-Banners, der beim Gewinnen des Spiels erscheint, definiert. Wann der Victory-Banner erscheinen soll, wird von der Klasse „BlackHoleworld“ gesteuert.
-
+## Code
+### SpaceWorld 
+### BlackHoleworld

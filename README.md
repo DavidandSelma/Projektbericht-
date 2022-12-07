@@ -42,7 +42,7 @@ Wenn das Spiel gestartet wird, dann wird eine Hintergrundmusik in einer Schleife
 <details>
 	<summary>Ausschnitt des Codes</summary>
 	
-	```J
+```J
 	
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 

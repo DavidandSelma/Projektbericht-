@@ -163,6 +163,7 @@ public class BlackHoleworld extends World
     }
 }
 	
+
 </details>
 
 
@@ -182,6 +183,7 @@ Wenn das Raumschiffes mit einem Asteroiden zusammenstößt, also falls die Über
 		<summary>Ausschnitt des Codes</summary>
 	
 	```J
+	
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Spaceship extends Actor

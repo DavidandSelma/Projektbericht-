@@ -45,10 +45,53 @@ Wenn das Spiel gestartet wird, dann wird eine Hintergrundmusik in einer Schleife
 </details> 
  
 ### BlackHoleworld
+
+Der Code der „BlackHoleworld“ ist fast identisch zum Code der „SpaceWorld“.
+
+Der erste Unterschied ist, dass die Asteroiden hier öfter generiert werden, nämlich jedes Mal, wenn der Counter ein Vielfaches von 40 ist und die Wale werden seltener generiert, nämlich wenn der Counter ein Vielfaches von 120 ist.
+
+Der zweite Unterschied ist, dass hier beim Erreichen eines Score von 25 der Victory-Banner angezeigt wird, also wenn das Spiel gewonnen ist. 
+
 ### Spaceship
+
+Das Raumschiff bekommt den aktuellen Score als Parameter beim Erzeugen des Raumschiffes übergeben. 
+
+Das Raumschiff wird mit den Pfeiltasten gesteuert. Drückt man die rechte Taste, so fährt das Raumschiff rückwärts, drückt man die linke, so steuert es geradeaus. Mit dem Drücken der oberen Taste bewegt es sich nach oben und mit dem Betätigen der unteren, nach unten. 
+
+In der „act“-Methode wird geprüft, ob eine Kollision auftritt. 
+
+Wenn das Raumschiff mit einem Wal in Berührung kommt, wird der Wal entfernt, ein bestimmtes Geräusch wird durch eine eingefügte Wav - Datei abgespielt und ein Punkt wird zum Score hinzugefügt.
+
+Wenn das Raumschiffes mit einem Asteroiden zusammenstößt, also falls die Überprüfung ergibt, dass sich ein Asteroid in der Nähe befindet, dann ist das Spiel automatisch beendet und der GameOver-Banner erscheint. Zudem wird bei dem Zusammenstoß eine Explosion erzeugt.
+
 ### Asteroid 
+
+Die Flugrichtung der Asteroiden – von links nach rechts - wird durch den Code festgelegt. 
+Wenn ein Asteroid einen Wal berührt, wird der Wal aus der Welt entfernt. 
+Darunter wird die Bewegung des Asteroiden definiert; jeder Asteroid addiert pro Durchlauf zwei Längeneinheiten zu seiner X Koordinate. 
+
 ### Wale 
+
+Die Lebensspanne ist eine zufällig generierte Zahl zwischen 0 und 500 und definiert die Zeit, wie lange die Wale in der Welt zu sehen sind, bevor sie wieder verschwinden. 
+
+Hierzu gibt es einen Counter der zunächst gleich 0 ist und bei jedem Aufruf der „act“-Methode um 1 erhöht wird. Ist der Counter größer als die Lebensspanne des Wals, wird er entfernt.
+
 ### Counter 
+
+Die Klasse „Counter“ zeigt den aktuellen Score an, der zählt wie viele Wale das Spaceship bereits eingefangen hat. Am Anfang steht der Scorecounter auf 0 und geht immer eins hoch, wenn ein Wal gefangen wurde. 
+
+Die Anzeige des Scores erscheint rechts oben in der Farbe weiß auf schwarzem Hintergrund. 
+
 ### Explosion
+
+Zunächst einmal gibt es in der Klasse „Explosion“ den Code dafür, dass ein Explosionsgeräusch auftritt, sobald das Spaceship mit einem Asteroiden zusammentrifft. Der Sound wird hierbei durch eine eingefügte Wav-Datei erzeugt. 
+
+Des Weiteren verschwindet das Explosions-Icon, nachdem die „act“-Methode 10-mal aufgerufen wurde, wieder von selbst
+
 ### Game Over 
+
+In der Klasse „GameOver“, ist der Code, für die Anzeige des GameOver-Banners, der beim Verlieren des Spiels erscheint, enthalten. Wann der GameOver-Banner erscheinen soll, ist in der Klasse des „Spaceship“ definiert.
+
 ### Victory 
+
+In der Klasse „Victory“, ist der Code, für die Anzeige des Victory-Banners, der beim Gewinnen des Spiels erscheint, definiert. Wann der Victory-Banner erscheinen soll, wird von der Klasse „BlackHoleworld“ gesteuert.

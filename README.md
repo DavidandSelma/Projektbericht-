@@ -182,7 +182,7 @@ Wenn das Raumschiffes mit einem Asteroiden zusammenstößt, also falls die Über
 <details>
 		<summary>Ausschnitt des Codes</summary>
 	
-	```J
+```J
 	
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
@@ -238,6 +238,8 @@ public class Spaceship extends Actor
 
 }
 
+	
+```
 </details>
 
 ### Asteroid 
@@ -249,7 +251,7 @@ Darunter wird die Bewegung des Asteroiden definiert; jeder Asteroid addiert pro 
 <details>
 		<summary>Ausschnitt des Codes</summary>
 	
-	```J
+```J
 	
 	import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
@@ -273,7 +275,9 @@ public class Asteroid extends Actor
         }
 
     }
-	</details>
+
+```
+</details>
 
 ### Wale 
 
@@ -284,7 +288,7 @@ Hierzu gibt es einen Counter der zunächst gleich 0 ist und bei jedem Aufruf der
 <details>
 		<summary>Ausschnitt des Codes</summary>
 	
-	```J
+```J
 public class Wale extends Actor
 {
     private int counter = 0; 
@@ -307,7 +311,9 @@ public class Wale extends Actor
     }
 }
 
-	</details>
+	
+```
+</details>
 
 ### Counter 
 
@@ -318,7 +324,7 @@ Die Anzeige des Scores erscheint rechts oben in der Farbe weiß auf schwarzem Hi
 <details>
 		<summary>Ausschnitt des Codes</summary>
 	
-	```J
+```J
 	import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Counter extends Actor
@@ -340,7 +346,9 @@ public class Counter extends Actor
     }
 }
 
-	</details>
+	
+```
+</details>
 
 ### Explosion
 
@@ -351,7 +359,7 @@ Des Weiteren verschwindet das Explosions-Icon, nachdem die „act“-Methode 10-
 <details>
 		<summary>Ausschnitt des Codes</summary>
 	
-	```J
+```J
 	public class Explosion extends Actor
 {
     private int counter = 0; 
@@ -372,7 +380,8 @@ Des Weiteren verschwindet das Explosions-Icon, nachdem die „act“-Methode 10-
     }
 }
 
-	</details>
+```	
+</details>
 	
 	
 
@@ -383,7 +392,7 @@ In der Klasse „GameOver“, ist der Code, für die Anzeige des GameOver-Banner
 <details>
 		<summary>Ausschnitt des Codes</summary>
 	
-	```J
+```J
 	
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
@@ -396,6 +405,7 @@ public class GameOver extends Actor
     }
 }
 
+```
 </details>
 	
 ### Victory 
@@ -406,7 +416,7 @@ In der Klasse „Victory“, ist der Code, für die Anzeige des Victory-Banners,
 <details>
 		<summary>Ausschnitt des Codes</summary>
 	
-	```J
+```J
 	
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
@@ -422,4 +432,5 @@ public class Victory extends Actor
     }
 }
 
+```
 </details>

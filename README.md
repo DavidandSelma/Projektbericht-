@@ -42,6 +42,59 @@ Wenn das Spiel gestartet wird, dann wird eine Hintergrundmusik in einer Schleife
 <details>
 	<summary>Ausschnitt des Codes</summary>
 	
+	```J
+	
+	import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
+public class SpaceWorld extends World {
+    private int counter = 0; 
+    private Counter scorecounter = new Counter(); 
+    private GreenfootSound music = new GreenfootSound("background.wav");
+
+    public SpaceWorld() {    
+        super(800, 400, 1, false);  // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        fillWorld();
+    }
+
+    public Counter getCounter() {
+        return scorecounter; 
+    }
+
+    public void act() {
+        counter = counter +1;
+        if (scorecounter.getScore() >= 10) {
+            Greenfoot.setWorld(new BlackHoleworld(scorecounter));
+        }
+        if (counter % 50 == 0) {
+            Asteroid myAsteroid = new Asteroid(); 
+            addObject(myAsteroid, -20, Greenfoot.getRandomNumber(getHeight()-1)); 
+        }
+        if (counter % 60 == 0) {
+            Wale myWale = new Wale(); 
+            addObject(myWale, Greenfoot.getRandomNumber(getWidth()-1), Greenfoot.getRandomNumber(getHeight()-1)); 
+        }
+    }
+
+    public void fillWorld() {
+        addObject (scorecounter, 730,20); 
+        Spaceship mySpaceship = new Spaceship(scorecounter);
+        addObject(mySpaceship, 600, 200);
+        Asteroid myAsteroid = new Asteroid(); 
+        addObject(myAsteroid, -20, 100); 
+    }
+
+    public void started()
+    {
+        music.playLoop();
+    }
+
+    public void stopped()
+    {
+        music.stop();
+    }
+}
+
+	
 </details> 
  
 ### BlackHoleworld

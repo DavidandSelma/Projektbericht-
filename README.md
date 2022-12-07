@@ -165,6 +165,7 @@ public class BlackHoleworld extends World
 	
 </details>
 
+
 ### Spaceship
 
 Das Raumschiff bekommt den aktuellen Score als Parameter beim Erzeugen des Raumschiffes übergeben. 

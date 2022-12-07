@@ -94,7 +94,7 @@ public class SpaceWorld extends World {
     }
 }
 
-	
+```	
 </details> 
  
 ### BlackHoleworld
@@ -163,7 +163,7 @@ public class BlackHoleworld extends World
     }
 }
 	
-
+```
 </details>
 
 

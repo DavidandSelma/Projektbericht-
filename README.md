@@ -44,7 +44,7 @@ Wenn das Spiel gestartet wird, dann wird eine Hintergrundmusik in einer Schleife
 	
 	```J
 	
-	import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class SpaceWorld extends World {
     private int counter = 0; 

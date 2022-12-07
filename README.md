@@ -106,9 +106,10 @@ Der erste Unterschied ist, dass die Asteroiden hier öfter generiert werden, nä
 Der zweite Unterschied ist, dass hier beim Erreichen eines Score von 25 der Victory-Banner angezeigt wird, also wenn das Spiel gewonnen ist. 
 
 <details>
-		<summary>Ausschnitt des Codes</summary>
+	<summary>Ausschnitt des Codes</summary>
+		
+```J
 	
-	```J
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 

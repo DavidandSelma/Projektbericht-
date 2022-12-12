@@ -442,8 +442,13 @@ public class Victory extends Actor
 (2)	https://www.youtube.com/watch?v=paESiHkp9mE&t=649s 
 
 (3)	https://www.youtube.com/watch?v=PK1glxAEjIg 
+
 (4)	https://www.youtube.com/watch?v=2eG1KUCBZYU&t=396s 
+
 (5)	https://www.youtube.com/watch?v=yT4XXQwfyFU 
+
 (6)	https://blogs.kcl.ac.uk/proged/joc/
+
 (7)	https://www.greenfoot.org/topics/243 
+
 (8)	Kölling, Michael (2010), Einführung in Java mit Greenfoot: Spielerische Programmierung mit Java, Pearson Studium - Informatik Schule
